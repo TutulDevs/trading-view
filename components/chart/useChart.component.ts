@@ -43,15 +43,21 @@ export const useChart = () => {
     "paneProperties.background": darkModeStatus ? colors.black1 : colors.white,
     "paneProperties.backgroundType": "solid", // solid  | gradient
 
+    // vertical grid box color
     "paneProperties.vertGridProperties.color": darkModeStatus
       ? colors.n3
       : colors.white1,
+
+    // horizontal grid box color
     "paneProperties.horzGridProperties.color": darkModeStatus
       ? colors.n3
       : colors.white1,
+
+    // symbol text and other info color
     "scalesProperties.textColor": darkModeStatus ? colors.n8 : colors.n1, // symbol text color
 
     //up and down
+    // candle-stick chart
     "mainSeriesProperties.candleStyle.upColor": getTVColor("up"),
     "mainSeriesProperties.candleStyle.downColor": getTVColor("down"),
     "mainSeriesProperties.candleStyle.drawBorder": true,
@@ -60,6 +66,8 @@ export const useChart = () => {
     "mainSeriesProperties.candleStyle.wickUpColor": getTVColor("up"),
     "mainSeriesProperties.candleStyle.wickDownColor": getTVColor("down"),
     "mainSeriesProperties.candleStyle.barColorsOnPrevClose": false,
+    
+    // hollow candle-stick chart
     "mainSeriesProperties.hollowCandleStyle.upColor": getTVColor("up"),
     "mainSeriesProperties.hollowCandleStyle.downColor": getTVColor("down"),
     "mainSeriesProperties.hollowCandleStyle.drawWick": true,
@@ -69,6 +77,8 @@ export const useChart = () => {
       getTVColor("down"),
     "mainSeriesProperties.hollowCandleStyle.wickUpColor": getTVColor("up"),
     "mainSeriesProperties.hollowCandleStyle.wickDownColor": getTVColor("down"),
+    
+    // heikin Aishi candle-stick chart
     "mainSeriesProperties.haStyle.upColor": getTVColor("up"),
     "mainSeriesProperties.haStyle.downColor": getTVColor("down"),
     "mainSeriesProperties.haStyle.drawWick": true,
@@ -77,10 +87,14 @@ export const useChart = () => {
     "mainSeriesProperties.haStyle.borderDownColor": getTVColor("down"),
     "mainSeriesProperties.haStyle.wickUpColor": getTVColor("up"),
     "mainSeriesProperties.haStyle.wickDownColor": getTVColor("down"),
+    
+    // bar candle-stick chart
     "mainSeriesProperties.barStyle.upColor": getTVColor("up"),
     "mainSeriesProperties.barStyle.downColor": getTVColor("down"),
     "mainSeriesProperties.barStyle.barColorsOnPrevClose": false,
     "mainSeriesProperties.barStyle.dontDrawOpen": false,
+
+    // line candle-stick chart
     "mainSeriesProperties.lineStyle.color": getTVColor("down"),
   };
 
