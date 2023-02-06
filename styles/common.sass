@@ -1,0 +1,84 @@
+@import ../styles/helpers
+html
+    overflow-x: hidden
+body
+    min-width: 375px
+    overflow-x: hidden
+    --p1: #3772FF
+    --p1a: #0045ea
+    --p1rgb: 55,114,255
+    --p2: #9757D7
+    --p3: #fa0000
+    --p3a: #d10000
+    --p3rgb: 250,0,0
+    --p4: #58BD7D
+    --p4a: #43a968
+    --p4rgb: 88,189,125
+    --s1: #{$s1}
+    --s2: #{$s2}
+    --s3: #{$s3}
+    --s4: #{$s4}
+    --t1: #{$t1}
+    --t2: #{$t2}
+    --cvd1: #{$cvd1}
+    --cvd2: #{$cvd2}
+    background: $n8
+    font-family: sans-serif
+    // +poppins
+    font-size: 14px
+    line-height: calc(24/14)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    color: $n2
+    +dark-body
+        background: $n1
+        color: $n8
+
+a
+    text-decoration: none
+
+svg,
+img
+    vertical-align: middle
+
+.tradePrice
+    &_fresh
+        &_up 
+            color: color(p4) !important
+        &_down 
+            color: color(p3) !important
+    &_traditional
+        &_up 
+            color: color(t1) !important
+        &_down 
+            color: color(t2) !important
+    &_color_vision_deficiency
+        &_up 
+            color: color(cvd1) !important
+        &_down 
+            color: color(cvd2) !important
+
+.tradePriceBg
+    &_fresh
+        &_up 
+            background-color: color(p4) !important
+        &_down 
+            background-color: color(p3) !important
+    &_traditional
+        &_up 
+            background-color: color(t1) !important
+        &_down 
+            background-color: color(t2) !important
+    &_color_vision_deficiency
+        &_up 
+            background-color: color(cvd1) !important
+        &_down 
+            background-color: color(cvd2) !important
+
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+.mt-2
+    margin-top: 8px

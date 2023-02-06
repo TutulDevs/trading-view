@@ -1,0 +1,74 @@
+@import ../../styles/helpers
+
+.label
+    margin-bottom: 12px
+    color: $n5
+    
+.radio
+    display: flex
+    align-items: center
+    position: relative
+    user-select: none 
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    &.radioDisabled
+        opacity: 0.5
+        cursor: not-allowed
+
+.input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0 
+    &:checked + .inner .tick
+        &:before
+            transform: translate(-50%,-50%) scale(1)
+
+.inner
+    display: flex
+    &:hover
+        .tick
+            border-color: color(p1)
+    &.innerFull
+        width: 100%
+
+.tick
+    position: relative
+    flex-shrink: 0
+    width: 24px
+    height: 24px
+    margin-right: 12px
+    border-radius: 50% 
+    border: 2px solid $n6
+    transition: all .2s
+    +dark
+        background: $n1
+        border-color: $n3
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%) scale(0)
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        background: color(p1)
+        transition: transform .2s
+
+.text
+    line-height: calc(24/14)
+    font-weight: 500
+    color: $n2 
+    +dark
+        color: $n8
+    span
+        font-weight: 400
+    strong
+        display: block
+        font-weight: 600
+    &.innerFull
+        width: 100%
+
+.error 
+    color: color(p3)

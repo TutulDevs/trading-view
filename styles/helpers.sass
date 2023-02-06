@@ -1,0 +1,70 @@
+// media queries
+=w
+    @media only screen and (max-width: "1419px")
+        @content
+=x
+    @media only screen and (max-width: "1339px")
+        @content
+=d
+    @media only screen and (max-width: "1179px")
+        @content
+=t
+    @media only screen and (max-width: "1023px")
+        @content
+=m
+    @media only screen and (max-width: "767px")
+        @content
+=a
+    @media only screen and (max-width: "639px")
+        @content
+=s
+    @media only screen and (max-width: "474px")
+        @content
+  
+// colors
+$p1: #3772FF
+$p2: #9757D7
+$p3: #fa0000
+$p4: #58BD7D
+$s1: #4BC9F0
+$s2: #E4D7CF
+$s3: #FFD166
+$s4: #CDB4DB
+$white: #ffffff
+$white1: #F8F8F9
+$white2: #F1F2F4
+$black: #000000
+$black1: #17181B
+$black2: #18191D
+
+
+$n1: #141416
+$n2: #23262F
+$n3: #353945
+$n4: #777E90
+$n5: #B1B5C3
+$n6: #E6E8EC
+$n7: #F4F5F6
+$n8: #FCFCFD
+
+$t1: rgb(116, 167, 0)
+$t2: rgb(234, 0, 112)
+$cvd1: rgb(31, 141, 249)
+$cvd2: rgb(221, 122, 43)
+
+// theme
+=dark
+    @at-root :global(.dark-mode) &
+        @content
+
+=dark-body
+    @at-root .dark-mode
+        @content
+
+=dark-common
+    @at-root .dark-mode &
+        @content
+
+// var function
+@function color($color-name) 
+    @return var(--#{$color-name})
