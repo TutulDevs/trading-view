@@ -99,8 +99,10 @@ export const useChart = () => {
   };
 
   const studyOverrides = {
+    // volume bars up to down
     "volume.volume.color.0": getTVColor("up"),
     "volume.volume.color.1": getTVColor("down"),
+    // unknown
     // "volume.volume.transparency": 0,
     // "volume.volume ma.color": "blue",
     // "volume.volume ma.transparency": 0,
@@ -114,6 +116,8 @@ export const useChart = () => {
     // "volume.options.showSeriesOHLC": false,
     // "volume.options.showBarChange": false,
     // "volume.options.showCountdown": false,
+    // "bollinger bands.median.color": "#ff0",
+    // "bollinger bands.upper.linewidth": 7
   };
 
   const timeFrames = [
@@ -144,7 +148,7 @@ export const useChart = () => {
   ];
 
   const widgetOptions: ChartingLibraryWidgetOptions = {
-    symbol: `Bitfinex:${baseCoin}/${tradeCoin}`,
+    symbol: `Bitfinex:${baseCoin}/${tradeCoin}`, // 
     datafeed: datafeed_dummy,
     fullscreen: false,
     autosize: true,
